@@ -1,0 +1,217 @@
+@font-face {
+    font-family: Audiowide;
+    src: url("../fonts/Audiowide/Audiowide-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: Aldrich;
+    src: url("../fonts/Aldrich/Aldrich-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+body {
+    font-family: Aldrich, monospace;
+    background-color: #000000FF;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("../img/bg.jpg");
+}
+@media (min-width: 992px) {
+    body {
+        background-image: url("../img/bg_lg.jpg");
+    }
+}
+/***
+ *     █████╗  ██████╗ ██████╗██╗   ██╗███████╗██╗██╗     
+ *    ██╔══██╗██╔════╝██╔════╝██║   ██║██╔════╝██║██║     
+ *    ███████║██║     ██║     ██║   ██║█████╗  ██║██║     
+ *    ██╔══██║██║     ██║     ██║   ██║██╔══╝  ██║██║     
+ *    ██║  ██║╚██████╗╚██████╗╚██████╔╝███████╗██║███████╗
+ *    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝╚══════╝
+ *                                                        
+ */
+#top {
+    width: 100%;
+    background-size: 100%;
+    animation-name: anim-fond;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+/* Propriétés affectées par le media queries */
+    height: 40rem;
+    margin-bottom: -40rem;
+    background-image: url("../img/fond_top.jpg");
+}
+/* Media queries correspondant au breakpoint lg dans BootStrap */
+@media (min-width: 992px) {
+    #top {
+        height: 64rem;
+        margin-bottom: -50rem;
+        background-image: url("../img/fond_top_lg.jpg");
+    }
+}
+@keyframes anim-fond {
+    0% {
+        background-size: 100%;
+    }
+    100% {
+        background-size: 110%;
+    }
+}
+.navbar {
+    background-color: #000000BB;
+}
+.navbar-brand img {
+    height: 3.2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 3px #0000FFFF;
+}
+.navbar-brand:hover img {
+    box-shadow: 0 0 6px 6px #0000FFBB, 0 0 3px 3px #FFFFFFFF;
+}
+.nav-link {
+    font-family: Audiowide, monospace;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.blue-shadow {
+    color: #FFFFFFFF;
+    text-shadow: -4px -4px 4px #0000FFFF, 4px -4px 4px #0000FFFF, -4px 4px 4px #0000FFFF, 4px 4px 4px #0000FFFF;
+}
+.blue-shadow:hover {
+    color: #FFFFFFFF;
+    text-decoration: none;
+    text-shadow: -8px -8px 8px #0000FFBB, 8px -8px 8px #0000FFBB, -8px 8px 8px #0000FFBB, 8px 8px 8px #0000FFBB,
+                 -4px -4px 4px #FFFFFFFF, 4px -4px 4px #FFFFFFFF, -4px 4px 4px #FFFFFFFF, 4px 4px 4px #FFFFFFFF;
+}
+header {
+    height: 30rem;
+}
+@media (min-width: 992px) {
+    header {
+        height: 40rem;
+    }
+}
+.black-shadow {
+    color: #FFFFFFFF;
+    text-shadow: -4px -4px 4px #000000FF, 4px -4px 4px #000000FF, -4px 4px 4px #000000FF, 4px 4px 4px #000000FF;
+}
+a.black-shadow:hover {
+    color: #FFFFFFFF;
+    text-decoration: none;
+    text-shadow: -8px -8px 8px #000000BB, 8px -8px 8px #000000BB, -8px 8px 8px #000000BB, 8px 8px 8px #000000BB,
+                 -4px -4px 4px #FFFFFFFF, 4px -4px 4px #FFFFFFFF, -4px 4px 4px #FFFFFFFF, 4px 4px 4px #FFFFFFFF;
+}
+
+main {
+    margin-top: 5rem;
+}
+/***
+ *    ███████╗███████╗ ██████╗████████╗██╗ ██████╗ ███╗   ██╗███████╗
+ *    ██╔════╝██╔════╝██╔════╝╚══██╔══╝██║██╔═══██╗████╗  ██║██╔════╝
+ *    ███████╗█████╗  ██║        ██║   ██║██║   ██║██╔██╗ ██║███████╗
+ *    ╚════██║██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║╚════██║
+ *    ███████║███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║███████║
+ *    ╚══════╝╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝
+ *                                                                   
+ */
+section {
+    background-color: #000000BB;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.decalage_section {
+    height: 5rem;
+}
+
+.photo {
+    height: 10rem;
+    border-radius: 50%;
+}
+
+#competences .card, #portfolio .card {
+    background-color: #00000077;
+}
+#competences .card-img-top {
+    width: 8rem;
+    max-width: 100%;
+}
+#portfolio .card-img-top {
+    width: 32rem;
+    max-width: 100%;
+}
+
+#formation .card {
+    background-color: #00000077;
+}
+#formation .card-img {
+    width: 4.5rem;
+    max-width: 100%;
+}
+
+#experience .col-1, #experience .col-3, #experience .col-8 {
+    padding: 0;
+}
+#experience img {
+    z-index: 20;
+    width: 4rem;
+    border-radius: 50%;
+}
+#experience p {
+    margin-bottom: 0;
+}
+.ligne_x {
+    margin-left: -50%;
+    width: 150%;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #FF8800FF;
+}
+.ligne_y {
+    width: 0.5rem;
+    background-color: #FF8800FF;
+}
+.annee {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 50%;
+    background-color: #FF8800FF;
+}
+
+#contact .separateur {
+    width: 100%;
+    height: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: #FFFFFFBB;
+}
+.form-control, .form-control:focus, button[type="submit"] {
+    background-color: #00000077;
+}
+.popover, .popover-header {
+    background-color: #000000DD;
+}
+
+footer {
+    height: 10rem;
+    background-color: #000000BB;
+}
+
+/***
+ *    ██████╗  ██████╗ ██╗     ██╗████████╗██╗ ██████╗ ██╗   ██╗███████╗    ██████╗ ███████╗     ██████╗ ██████╗ ███╗   ██╗███████╗██╗██████╗ ███████╗███╗   ██╗████████╗██╗ █████╗ ██╗     ██╗████████╗███████╗
+ *    ██╔══██╗██╔═══██╗██║     ██║╚══██╔══╝██║██╔═══██╗██║   ██║██╔════╝    ██╔══██╗██╔════╝    ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔══██╗██╔════╝████╗  ██║╚══██╔══╝██║██╔══██╗██║     ██║╚══██╔══╝██╔════╝
+ *    ██████╔╝██║   ██║██║     ██║   ██║   ██║██║   ██║██║   ██║█████╗      ██║  ██║█████╗      ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ██║█████╗  ██╔██╗ ██║   ██║   ██║███████║██║     ██║   ██║   █████╗  
+ *    ██╔═══╝ ██║   ██║██║     ██║   ██║   ██║██║▄▄ ██║██║   ██║██╔══╝      ██║  ██║██╔══╝      ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║  ██║██╔══╝  ██║╚██╗██║   ██║   ██║██╔══██║██║     ██║   ██║   ██╔══╝  
+ *    ██║     ╚██████╔╝███████╗██║   ██║   ██║╚██████╔╝╚██████╔╝███████╗    ██████╔╝███████╗    ╚██████╗╚██████╔╝██║ ╚████║██║     ██║██████╔╝███████╗██║ ╚████║   ██║   ██║██║  ██║███████╗██║   ██║   ███████╗
+ *    ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═╝   ╚═╝ ╚══▀▀═╝  ╚═════╝ ╚══════╝    ╚═════╝ ╚══════╝     ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝╚═════╝ ╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚═╝╚═╝  ╚═╝╚══════╝╚═╝   ╚═╝   ╚══════╝
+ *                                                                                                                                                                                                              
+ */
+#polconf h6 {
+    margin-top: 1rem;
+}
+#polconf p {
+    margin: 0;
+}
