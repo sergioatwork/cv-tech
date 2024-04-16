@@ -152,7 +152,7 @@ section {
     max-width: 100%;
 }
 
-#experience .col-1, #experience .col-3, #experience .col-8 {
+#experience .col-1,#experience .col-2, #experience .col-3, #experience .col-8 {
     padding: 0;
 }
 #experience img {
@@ -163,22 +163,23 @@ section {
 #experience p {
     margin-bottom: 0;
 }
-.ligne_x {
-    margin-left: -50%;
-    width: 150%;
-    height: 0.5rem;
-    border-radius: 0.25rem;
-    background-color: #FF8800FF;
-}
-.ligne_y {
-    width: 0.5rem;
-    background-color: #FF8800FF;
-}
-.annee {
+.duree {
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
     border-radius: 50%;
+    background-color: #FF8800FF;
+}
+.ligne_x {
+    width: 100%;
+    margin-left: 75%;
+    margin-top: -2.25rem;
+    height: 0.5rem;
+    background-color: #FF8800FF;
+}
+.ligne_y {
+    width: 0.5rem;
+    height: 100%;
     background-color: #FF8800FF;
 }
 
