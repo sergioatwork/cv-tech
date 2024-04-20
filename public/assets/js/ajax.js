@@ -34,6 +34,7 @@ const pop_email_invalid = {
  */
 
 requeteXHR = function(route, dataPost, action){
+    console.info("Début requête XHR...");
     let reqXhr = new XMLHttpRequest();
     let data = dataPost;
     reqXhr.onload = function(){action(reqXhr.responseText, reqXhr.status)};
@@ -44,11 +45,13 @@ requeteXHR = function(route, dataPost, action){
 }
 
 returnSendMsg = function(responseXhr = null , responseStatus = null){
-    $('#btn_send').popover('dispose')
+    console.info("Retour requête XHR : envoi d'email...");
+    $('#btn_send').popover('dispose');
     try {
         if (responseXhr != null && responseStatus == 200) {
             let resultSendMsg = JSON.parse(responseXhr);
             if (resultSendMsg.statusMail) {
+                console.info("Retour requête XHR : envoi email OK");
                 $('#btn_send').popover(pop_success);
                 $('#btn_send').popover('show');
             } else {
@@ -58,6 +61,7 @@ returnSendMsg = function(responseXhr = null , responseStatus = null){
             throw true;
         }
     } catch(error) {
+        console.warn("Retour requête XHR : envoi email KO");
         $('#btn_send').popover(pop_error);
         $('#btn_send').popover('show');
     }
@@ -73,12 +77,13 @@ document.querySelector("#btn_send").addEventListener("click", function(event){
     event.preventDefault();
     let email = document.querySelector("[type='email']");
     if (verificationEmail(email.value)) {
+        console.info("Email OK");
         let dataForm = new FormData(document.querySelector("#form_send_msg"));
         $('#btn_send').popover(pop_send);
         $('#btn_send').popover('show');
         requeteXHR("backend.php", dataForm, returnSendMsg); // voir si l'on peut mettre des valeurs par défaut du type returnSendMsg(null, null)
     } else {
-        console.error('email non valide');
+        console.warn('Email non valide');
         $(email).popover(pop_email_invalid);
         $(email).popover('show');
         email.addEventListener('focus', () => $('[type="email"]').popover('dispose'));

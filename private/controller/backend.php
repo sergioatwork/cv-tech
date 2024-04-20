@@ -3,6 +3,8 @@
 require_once("../private/config/config.php");
 
 //// Log le début de paragraphe ci-dessous à chaque appel du backend
+error_log( '' );
+error_log( '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< '.date('l jS \of F Y h:i:s A').' >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>' );
 error_log( '***' );
 error_log( '*' );
 error_log( '*    ██╗      ██████╗  ██████╗    '.$_SERVER['HTTP_USER_AGENT'] );
@@ -31,6 +33,6 @@ switch ($form) {
         break;
     
     default:
-        echo("Le traitement du formulaire demandé n'existe pas !!!");
+        error_log("Le traitement du formulaire demandé n'existe pas !!!");
         break;
 }

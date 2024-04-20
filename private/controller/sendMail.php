@@ -1,5 +1,5 @@
 <?php
-    // use Email;
+    use Email;
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
@@ -51,7 +51,7 @@
             $statusMail = TRUE;
         } catch (Exception $e) {
             $statusMail = FALSE;
-            error_log("L'email n'a pas pu être envoyé. PHPMailer Error: {$mail->ErrorInfo}");
+            error_log("PHP : L'email n'a pas pu être envoyé. PHPMailer Error : {$mail->ErrorInfo}");
         }
     } else {
         $statusMail = FALSE;
