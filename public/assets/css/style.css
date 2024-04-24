@@ -132,13 +132,26 @@ section {
     border-radius: 50%;
 }
 
+.invert-img {
+    filter: invert(100%);
+}
+
 #competences .card, #portfolio .card {
     background-color: #00000077;
 }
-#competences .card-img-top {
-    width: 8rem;
-    max-width: 100%;
+
+#competences h3 img {
+    height: 2rem;
+    filter: invert(100%);
 }
+#competences .card img {
+    height: 8rem;
+    max-height: 100%;
+}
+#competences .card-footer img {
+    height: 1rem;
+}
+
 #portfolio .card-img-top {
     width: 32rem;
     max-width: 100%;
